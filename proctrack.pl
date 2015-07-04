@@ -33,8 +33,6 @@ print "ProcTable is enabled" if ($useProcTable);
 
 $timeout=1 unless $timeout;
 
-my %s;
-
 my @statvals=qw{pid comm state ppid pgrp session tty_nr tpgid flags minflt cminflt majflt cmajflt utime stime cutime cstime priority nice num_threads itrealvalue starttime vsize rss rsslim startcode endcode startstack kstkesp kstkeip signal blocked sigignore sigcatch wchan nswap cnswap exit_signal processor rt_priority policy delayacct_blkio_ticks guest_time cguest_time};
 @track=@statvals if "@track" eq 'all';
 @track=map {split(/\W+/)} @track if @track;
